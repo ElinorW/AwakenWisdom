@@ -23,6 +23,20 @@ export const GradientBackgroundCon = styled.div`
     }
 `;
 
+export const BackgroundImage1 = styled(Image)`
+    position: relative;
+    z-index: 1;
+    margin-left: -10px;
+    margin-top: -10px;
+`;
+
+export const BackgroundImage2 = styled(Image)`
+    position: fixed;
+    z-index: 1;
+    right: -60px;
+    bottom: 0px;
+`;
+
 export const FooterCon = styled.div`
     width: 100vw;
     height: 50px;
@@ -50,12 +64,12 @@ export const QuoteGeneratorCon = styled.div`
     position: absolute;
     z-index: 2;
 
-    backdrop-filter: blur(5px); 
-    background-color: rgba(255, 255, 255, 1); 
-    border-radius: 26px; 
-    box-shadow: 35px 35px 68px 0px rgba(145, 192, 255, 0.5), 
-    inset -8px -8px 16px 0px rgba(145, 192, 255, 0.6), 
-    inset 0px 11px 28px 0px rgb(255, 255, 255);
+    background: rgba( 144, 19, 254, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 `;
 
 export const QuoteGeneratorInnerCon = styled.div`
@@ -67,10 +81,10 @@ export const QuoteGeneratorInnerCon = styled.div`
 `;
 
 export const QuoteGeneratorTitle = styled.div`
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Dancing Script', cursive;
     font-size: 50px;
     text-align: center;
-    color: #000000;
+    color: white;
     padding: 0px 20px 0px 20px;
     position: relative;
     @media only screen and (max-width: 600px) {
@@ -80,7 +94,7 @@ export const QuoteGeneratorTitle = styled.div`
 
 export const QuoteGeneratorSubTitle = styled.div`
     color: white;
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 35px;
     position: relative;
     width: 100%;
@@ -91,11 +105,11 @@ export const QuoteGeneratorSubTitle = styled.div`
     }
 `;
 
-export const GenerateQuoteButton = styled.button`
+export const GenerateQuoteButton = styled.div`
     height: 100px;
     width: 300px;
-    border:2px solid darkgrey;
     border-radius: 20px;
+
     margin-top: 20px;
     position: relative;
     transition: 0.2s all ease-in-out;
@@ -104,12 +118,13 @@ export const GenerateQuoteButton = styled.button`
     margin: auto;
     transform-origin: center;
 
-    backdrop-filter: blur(5px); 
-    background-color: #91C0FF; 
-    border-radius: 26px; 
-    box-shadow: 35px 35px 68px 0px rgba(145, 192, 255, 0.5), 
-    inset -8px -8px 16px 0px rgba(145, 192, 255, 0.6), 
-    inset 0px 11px 28px 0px rgb(255, 255, 255);
+    background: rgba( 144, 19, 254, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    
     &:hover{
         filter: brightness(3);
         transition: 0.2s all ease-in-out;
@@ -120,7 +135,7 @@ export const GenerateQuoteButton = styled.button`
 
 export const GenerateQuoteButtonText = styled.div`
     color: white;
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 35px;
     left: 50%;
     top: 50%;
@@ -128,4 +143,7 @@ export const GenerateQuoteButtonText = styled.div`
     position: absolute;
     width: 100%;
     text-align: center;
+    @media only screen and (max-width: 600px) {
+        font-size: 20px;
+    }
     `;
